@@ -1,0 +1,95 @@
+# eTax Mobile - Project Rules
+
+## Mục đích project
+Clone lại giao diện ứng dụng mobile eTax thành phiên bản web PWA. Project này là HTML/CSS/JS thuần, không dùng framework.
+
+## Cấu trúc project
+
+### Thư mục chính
+- `assets/`: Tất cả ảnh, icon (đã chuyển sang webp)
+- `css/`: File CSS - `common.css` là file chung, các file khác cho từng trang
+- `js/`: File JavaScript - `auth.js`, `utils.js` là file chung
+- `pages/`: Các trang HTML chức năng (16 trang)
+- `reference-images/`: 33 ảnh chụp màn hình từ app mobile gốc (để tham khảo)
+
+### Quy tắc đặt tên
+- File HTML: `ten-trang.html` (kebab-case, tiếng Việt không dấu)
+- File CSS: `ten-trang.css` (trong `css/pages/`)
+- File JS: `ten-trang.js` (trong `js/pages/`)
+- Tên file phải khớp nhau giữa HTML, CSS, JS
+
+### Đường dẫn
+- Từ root (home.html, login.html): `css/common.css`, `js/auth.js`
+- Từ pages: `../css/common.css`, `../js/pages/ten-trang.js`
+- Assets: `assets/ten-file.webp` (từ root), `../assets/ten-file.webp` (từ pages)
+
+## Design System
+
+### Màu sắc (CSS Variables)
+- `--color-primary: #C60000` - Màu đỏ chủ đạo
+- `--color-text: #ffffff` - Chữ trắng
+- `--color-surface: #FFFFFF` - Nền trắng
+- `--color-text-primary: #000000` - Chữ đen
+
+### Spacing
+- `--spacing: 24px` - Khoảng cách chuẩn
+- `--spacing-sm: 16px` - Khoảng cách nhỏ
+- `--spacing-xs: 8px` - Khoảng cách rất nhỏ
+
+### Border Radius
+- `--radius: 28px` - Bo góc lớn
+- `--radius-sm: 18px` - Bo góc nhỏ
+
+## Quy tắc code
+
+### HTML
+- Luôn dùng `lang="vi"` trong thẻ `<html>`
+- Meta viewport: `width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no`
+- Theme color: `#C60000`
+- Tất cả trang (trừ login) phải check authentication
+
+### CSS
+- Luôn import `common.css` trước
+- Sử dụng CSS Variables từ `common.css`
+- Mobile-first approach
+- Responsive cho màn hình nhỏ (điện thoại)
+
+### JavaScript
+- Dùng ES6 modules (`type="module"`)
+- Tất cả trang (trừ login) phải gọi `requireAuth()` từ `utils.js`
+- Dùng `navigateTo()` từ `utils.js` để điều hướng
+- Comments bằng tiếng Việt
+
+## Authentication
+
+- Hiện tại dùng localStorage (chưa có Firebase thật)
+- File `auth.js` xử lý login/logout
+- Tất cả trang (trừ login) cần check `isAuthenticated()`
+
+## PWA
+
+- File `manifest.json` cấu hình PWA
+- File `sw.js` là Service Worker
+- Icon: `assets/logo-192.webp`
+
+## Reference Images
+
+- Thư mục `reference-images/` chứa 33 ảnh chụp màn hình từ app mobile gốc
+- Khi clone giao diện, phải tham khảo ảnh này để đảm bảo giống 100%
+- Assets đã được cắt ra và chuyển sang webp trong thư mục `assets/`
+
+## Quy tắc khi thêm trang mới
+
+1. Tạo 3 file: `pages/ten-trang.html`, `css/pages/ten-trang.css`, `js/pages/ten-trang.js`
+2. HTML phải import `../css/common.css` và `../css/pages/ten-trang.css`
+3. HTML phải import `../js/pages/ten-trang.js` với `type="module"`
+4. JS phải import `requireAuth` từ `../utils.js` và gọi `await requireAuth('../login.html')`
+5. Trang phải có nút "Quay lại" về `../home.html`
+
+## Lưu ý quan trọng
+
+- Project này là HTML/CSS/JS thuần, KHÔNG dùng framework
+- Tất cả code comments bằng tiếng Việt
+- Giao diện phải giống 100% với app mobile gốc (tham khảo reference-images)
+- Assets đã được tối ưu (webp), không cần tối ưu thêm
+- Mobile-first: Ưu tiên thiết kế cho điện thoại
