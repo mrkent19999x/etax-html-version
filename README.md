@@ -112,7 +112,35 @@ Thư mục `reference-images/` chứa 33 ảnh chụp màn hình từ app mobile
 ---
 
 **Lưu ý**: Đây là phiên bản HTML tĩnh, chưa kết nối với backend thật. Hiện tại đang dùng localStorage để mô phỏng authentication.
-<<<<<<< HEAD
 
-=======
->>>>>>> 4b40088755e8bd607e216e1af53347a4494950c6
+---
+
+## 💡 Tại sao chọn phiên bản HTML thuần này?
+
+### So sánh với Etaxfinal (Next.js)
+
+| Tiêu chí | **etax-html-version** (Phiên bản này) | **Etaxfinal** (Next.js) |
+|----------|--------------------------------------|-------------------------|
+| **Độ phức tạp** | ⭐ Đơn giản | ⭐⭐⭐⭐⭐ Phức tạp |
+| **Cần npm?** | ❌ Không cần | ✅ Cần |
+| **Cần build?** | ❌ Không cần | ✅ Cần (`npm run build`) |
+| **Cách chạy** | Mở file HTML trực tiếp | `npm run dev` |
+| **File cấu hình** | Chỉ có `manifest.json` | `package.json`, `next.config.js`, `tsconfig.json`, v.v. |
+| **Dễ hiểu** | ✅ Rất dễ - chỉ có HTML/CSS/JS | ❌ Phức tạp - có nhiều file config |
+
+### Ưu điểm của phiên bản HTML thuần
+
+- ✅ **Đơn giản**: Chỉ cần mở file HTML là chạy được
+- ✅ **Dễ hiểu**: Không có npm, không có build, không có config phức tạp
+- ✅ **Dễ học**: Phù hợp cho người mới học code
+- ✅ **Nhanh**: Không cần cài đặt gì, mở là chạy
+- ✅ **Rõ ràng**: Cấu trúc đơn giản: `index.html` → `login.html` → `home.html` → các trang con
+
+### Khi nào cần dùng Next.js (Etaxfinal)?
+
+- Khi cần Server-Side Rendering (SSR)
+- Khi cần API routes
+- Khi cần tối ưu SEO nâng cao
+- Khi team đã quen với React/Next.js
+
+**Kết luận**: Phiên bản HTML thuần này phù hợp cho người mới học và muốn hiểu code một cách đơn giản nhất!
