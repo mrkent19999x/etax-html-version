@@ -112,4 +112,7 @@ Thư mục `reference-images/` chứa 33 ảnh chụp màn hình từ app mobile
 ---
 
 **Lưu ý**: Đây là phiên bản HTML tĩnh, chưa kết nối với backend thật. Hiện tại đang dùng localStorage để mô phỏng authentication.
+<<<<<<< HEAD
 
+=======
+>>>>>>> 4b40088755e8bd607e216e1af53347a4494950c6
