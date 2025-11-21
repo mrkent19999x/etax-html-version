@@ -1,0 +1,50 @@
+.page-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 1rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 20;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  padding-top: calc(1rem + env(safe-area-inset-top, 0px));
+}
+
+.header-back,
+.header-home {
+  color: white;
+  padding: 8px;
+}
+
+.header-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+  flex: 1;
+  text-align: center;
+}
+
+.page-content {
+  margin-top: calc(var(--header-height, 64px) + env(safe-area-inset-top, 0px));
+  padding: 1rem;
+  min-height: calc(100vh - var(--header-height, 64px));
+  background-color: #ffffff;
+}
+
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.25rem;
+  margin-top: 2.5rem;
+}
+
+.section-card {
+  border: none;
+  background: transparent;
+}
+
+

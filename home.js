@@ -110,6 +110,8 @@ function populateSidebarMenu() {
     { icon: 'assets/index1.webp', label: 'Hoá đơn điện tử', href: 'pages/hoa-don-dien-tu.html' },
     { icon: 'assets/index2.webp', label: 'Khai thuế', href: 'pages/khai-thue.html' },
     { icon: 'assets/index3.webp', label: 'Đăng ký thuế', href: 'pages/dang-ky-thue.html' },
+    { icon: 'assets/index4.webp', label: 'Hỗ trợ quyết toán thuế TNCN', href: 'pages/ho-tro-quyet-toan.html' },
+    { icon: 'assets/index5.webp', label: 'Nhóm chức năng nộp thuế', href: 'pages/nhom-chuc-nang-nop-thue.html' },
     { icon: 'assets/index6.webp', label: 'Tra cứu nghĩa vụ thuế', href: 'pages/tra-cuu-nghia-vu-thue.html' },
     { icon: 'assets/index7.webp', label: 'Tra cứu thông báo', href: 'pages/thong-bao.html' },
     { icon: 'assets/index8.webp', label: 'Tiện ích', href: 'pages/tien-ich.html' },
