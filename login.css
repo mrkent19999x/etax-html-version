@@ -3,7 +3,8 @@
 /* Design Tokens */
 .wrapper {
   --login-primary: #C60000;
-  --login-accent: #facc15;
+  /* Vàng tươi hơn để giống app gốc */
+  --login-accent: #ffe600;
   --login-text: #ffffff;
   --login-error: #fca5a5;
   --login-border: rgba(255, 255, 255, 0.8);
@@ -94,7 +95,8 @@ body:has(.wrapper) {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: var(--login-spacing);
+  /* Giảm khoảng cách dọc một chút cho giống bố cục thật */
+  gap: 20px;
   width: 100%;
   justify-content: flex-start;
 }
@@ -107,7 +109,20 @@ body:has(.wrapper) {
 }
 
 .inputGroup label {
-  display: none;
+  /* Hiển thị nhãn giống thiết kế “Mã số thuế” / “Mật khẩu” */
+  position: static;
+  width: auto;
+  height: auto;
+  margin: 0 0 4px;
+  padding: 0;
+  overflow: visible;
+  clip: auto;
+  white-space: normal;
+  border-width: 0;
+  display: block;
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .inputRow {
@@ -214,7 +229,7 @@ body:has(.wrapper) {
   font-size: 14px;
   font-weight: 600;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35);
-  margin-top: 0;
+  margin-top: 12px;
 }
 
 .helpLinks a {
@@ -229,7 +244,8 @@ body:has(.wrapper) {
 /* Login Button */
 .loginButtonContainer {
   position: relative;
-  margin-top: 0;
+  /* Đẩy nút xuống thấp hơn một chút như app gốc */
+  margin-top: 28px;
 }
 
 .loginButton {
@@ -289,7 +305,7 @@ body:has(.wrapper) {
   box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
   border: none;
   cursor: pointer;
-  margin-top: 0;
+  margin-top: 16px;
   transition: transform 0.1s;
   width: 100%;
   touch-action: manipulation;
@@ -321,11 +337,11 @@ body:has(.wrapper) {
 
 /* Signup Section */
 .signupSection {
-  margin-top: 0;
+  margin-top: 18px;
   margin-bottom: 20px;
   color: var(--login-text);
-  font-size: 16px;
-  line-height: 1.6;
+  font-size: 14px;
+  line-height: 1.5;
   display: flex;
   flex-direction: column;
   gap: var(--login-spacing);
